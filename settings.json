@@ -1,0 +1,47 @@
+{
+  "server": {
+    "host": "0.0.0.0",
+    "port": 1212
+  },
+  "api": {
+    "keys_file": "keys.txt",
+    "default_message": "http://0.0.0.0:1212/api?yazi=Merhaba&key=API_KEY adresine istek gönderebilirsiniz.",
+    "response_messages": {
+      "ai_message": "message",
+      "code_blocks": "code",
+      "img_link": "image"
+    }
+  },
+  "log_messages": {
+    "invalid_api_key": "Geçersiz API key",
+    "missing_yazi_param": "Geçerli bir 'yazi' parametresi girin.",
+    "error_occurred": "Bir hata oluştu: ",
+    "server_started": "Sunucu başlatıldı.",
+    "image_found": "Resim bulundu: ",
+    "image_not_found": "Resim bulunamadı",
+    "waiting_for_image": "Resim aranıyor...",
+    "div_found": "Resim oluşturucu bulundu.",
+    "div_not_found": "Belirtilen div bulunamadı. Resim arama işlemi durduruluyor.",
+    "login_prompt": "Giriş yapın ve Cloudflare doğrulamasını tamamlayın, ardından Enter'a basın..."
+  },
+  "driver": {
+    "chrome_driver_path": "./chromedriver.exe",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.198 Safari/537.36"
+  },
+  "cookies_path": "./saves/cookies.pkl",
+  "localstorage_path": "./saves/localstorage.pkl",
+  "xpath_user_input": "//*[@id='userInput']",
+  "xpath_ai_message": "//div[@data-content='ai-message']",
+  "xpath_code_blocks": "//code[@class='text-sm font-ligatures-none']",
+  "xpath_img_container": ".//div[contains(@class, 'w-full max-w-96 aspect-square rounded-2xl overflow-hidden')]",
+  "img_link_check_timeout": 30,
+  "wait_time": 0.2,
+  "prefixes": [
+    "SaironAI+\\n",
+    "Copilot\\n"
+  ],
+  "replace": {
+    "Microsoft": "Sairon Software",
+    "Copilot": "SaironAI+"
+  }
+}
